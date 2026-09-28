@@ -1,0 +1,26 @@
+{
+  "schema_version": "workflow-execution-telemetry/1",
+  "execution_id": "exec-0001",
+  "recorded_at": "2026-09-15T13:30:00Z",
+  "workflow_id": "world-canon-recovery",
+  "taskset_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "task_id": "WORLD-CANON-CHECKER-CREATE-V1",
+  "logical_key": "world-canon-checker-create",
+  "contract_version": 1,
+  "card_type": "CREATE",
+  "executor_profile_id": "hermes-local-default",
+  "result": "SUCCESS",
+  "failure_class": null,
+  "duration_ms": 1234,
+  "attempt": 1,
+  "outcome_stage": "EXECUTED",
+  "metrics": {
+    "output_count": 1,
+    "allowed_path_count": 1,
+    "dependency_count": 0,
+    "acceptance_count": 1,
+    "command_contract_count": 1,
+    "instruction_chars": 800,
+    "complexity_score": 6
+  }
+}

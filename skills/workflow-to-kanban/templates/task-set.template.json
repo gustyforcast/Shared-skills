@@ -1,0 +1,123 @@
+{
+  "schema_version": "1.0.0",
+  "task_set_version": "1",
+  "workflow_id": "wf-world-canon-example",
+  "source_request": "Create a bounded checker task that proves the expected initial RED state without modifying any other file.\nREQUIREMENT REQ-WORLD-CANON-001: Create the checker and demonstrate its expected initial RED state.\nPURPOSE PURP-WORLD-CANON-001: Establish a deterministic gate before canonical world inputs are created.\nWORKFLOW INVARIANT WI-1: Do not modify files outside declared write boundaries.",
+  "tasks": [
+    {
+      "id": "WORLD-CANON-CHECKER-CREATE-V1",
+      "title": "Create world canon contract checker",
+      "objective": "Create the declared checker file and run it once to demonstrate the expected initial RED state.",
+      "scope": [
+        "Create only scripts/world-canon-contract-check.mjs",
+        "Run the checker once after creation",
+        "Report the exact verification result"
+      ],
+      "context": [
+        "CARD TYPE: CREATE",
+        "TASK TEMPLATE: CREATE",
+        "EVIDENCE PROFILE: CREATE",
+        "REPORTING BOUNDARY: evidence-only",
+        "REQUIREMENT ID: REQ-WORLD-CANON-001",
+        "PURPOSE ID: PURP-WORLD-CANON-001",
+        "PROVENANCE SRC-USER-001: type=user | locator=current-request | claim=create the checker before canonical inputs exist",
+        "OUTCOME STAGE: EXECUTED",
+        "LIFECYCLE logical key: world-canon-checker-create",
+        "LIFECYCLE contract version: 1",
+        "LIFECYCLE supersedes: none",
+        "REPOSITORY STATE: pinned",
+        "REPOSITORY root: C:\\HermesSandboxes\\bof-world-a1-20260915",
+        "REPOSITORY worktree: C:\\HermesSandboxes\\bof-world-a1-20260915",
+        "REPOSITORY ref: recovery/world-canon",
+        "REPOSITORY head: 0123456789abcdef0123456789abcdef01234567",
+        "REPOSITORY dirty: clean",
+        "LOWERING: bounded-agentic",
+        "AGENTIC JUSTIFICATION: checker contents require code synthesis, but source choices, mutation boundaries, command, and acceptance are already fixed",
+        "PATH ROLE output to create: scripts/world-canon-contract-check.mjs",
+        "PATH ROLE read-only reference: repository files outside the allowed path",
+        "ARTEFACT CONTRACT: scripts/world-canon-contract-check.mjs | purpose=reject incomplete world-canon packages deterministically | required=checks the declared canonical paths and literals | prohibited=mutating repository files other than its own creation or fetching network resources",
+        "SOURCE workflow decision: the checker is created before the canonical files it will require",
+        "EXPECTED OUTCOME: RED on the first checker run because required canonical inputs do not yet exist"
+      ],
+      "constraints": [
+        "INHERITED INVARIANT WI-1: Do not modify files outside declared write boundaries.",
+        "Do not look for scripts/world-canon-contract-check.mjs; it is the output.",
+        "Do not modify any file except scripts/world-canon-contract-check.mjs.",
+        "Do not create missing canonical inputs during this task.",
+        "Verify the repository state matches the declared REPOSITORY pin before any write; a material mismatch is UNEXPECTED_REPOSITORY_STATE.",
+        "Stop on surprise: if a required path, input, command, API, test, or repository condition materially differs from this card, stop and report the discrepancy. Do not compensate by changing unrelated files.",
+        "Reporting boundary: return only declared evidence, exact discrepancies, and a failure classification when applicable; do not provide design alternatives, speculative next steps, unrelated repository observations, or refactoring suggestions."
+      ],
+      "inputs": [],
+      "outputs": [
+        "scripts/world-canon-contract-check.mjs"
+      ],
+      "workspace": "C:\\HermesSandboxes\\bof-world-a1-20260915",
+      "allowed_paths": [
+        "scripts/world-canon-contract-check.mjs"
+      ],
+      "dependencies": [],
+      "executor_requirements": [
+        {
+          "capability": "filesystem_read",
+          "required": true
+        },
+        {
+          "capability": "filesystem_write",
+          "required": true
+        },
+        {
+          "capability": "shell",
+          "required": true
+        },
+        {
+          "capability": "git",
+          "required": true
+        }
+      ],
+      "fingerprint": {
+        "domain": "software",
+        "operation": "generation",
+        "reasoning": "low",
+        "ambiguity": "low",
+        "determinism": "high",
+        "risk": "medium",
+        "context_size": "small",
+        "tool_requirements": [
+          "filesystem_read",
+          "filesystem_write",
+          "shell",
+          "git"
+        ],
+        "verification_strength": "strong"
+      },
+      "acceptance": [
+        {
+          "id": "A1",
+          "criterion": "The checker exists at the exact declared output path and no other file is a declared output.",
+          "evidence_requirements": [
+            {
+              "method": "file_exists",
+              "target": "scripts/world-canon-contract-check.mjs",
+              "expected": "exists"
+            }
+          ]
+        },
+        {
+          "id": "A2",
+          "criterion": "The checker is run exactly once and demonstrates the expected initial failure state.",
+          "evidence_requirements": [
+            {
+              "method": "command_exit",
+              "target": "node scripts/world-canon-contract-check.mjs",
+              "expected": "non-zero exit; EXPECTED OUTCOME: RED because required canonical inputs do not yet exist"
+            }
+          ]
+        }
+      ],
+      "state": "held",
+      "recorded_evidence": [],
+      "parent_workflow_id": "wf-world-canon-example"
+    }
+  ]
+}

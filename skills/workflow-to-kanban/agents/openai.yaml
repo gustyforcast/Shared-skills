@@ -1,0 +1,14 @@
+interface:
+  display_name: workflow to kanban
+  short_description: Use when converting a natural-language workflow, chat thread,
+    repository plan, or mixed source material into bounded Kanban tasks for another
+    executor.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

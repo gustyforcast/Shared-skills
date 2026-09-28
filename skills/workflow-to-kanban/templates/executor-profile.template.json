@@ -1,0 +1,11 @@
+{
+  "profile_id": "hermes-local-default",
+  "capabilities": {
+    "filesystem_read": true,
+    "filesystem_write": true,
+    "shell": true,
+    "git": true,
+    "browser": false,
+    "network": false
+  }
+}

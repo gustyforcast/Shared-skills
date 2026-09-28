@@ -1,0 +1,14 @@
+{
+  "schema_version": "workflow-budget-policy/1",
+  "policy_id": "default-v1",
+  "thresholds": {
+    "primary_outputs_max": 1,
+    "allowed_paths_max": 2,
+    "command_contracts_max": 3
+  },
+  "evidence_gate": {
+    "minimum_samples_per_value": 10,
+    "minimum_failure_rate_delta": 0.15,
+    "direction": "tighten-only"
+  }
+}

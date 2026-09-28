@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.0.0",
+  "workflow_id": "wf-world-canon-example",
+  "task_id": "WORLD-CANON-CHECKER-CREATE-V1",
+  "failure_class": "INSTRUCTION_AMBIGUITY",
+  "summary": "Executor interpreted a declared output-to-create as a missing prerequisite.",
+  "evidence": [
+    "Worker report named a missing prerequisite that was not part of the task contract."
+  ],
+  "retry_same_contract": false,
+  "required_action": "Redesign the handoff; supersede the released contract if its instructions must change."
+}
