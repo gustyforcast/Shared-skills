@@ -1,0 +1,1 @@
+Synthetic raw observation: one plain-text lesson line, with the question and answer visible. This fixture is not evidence about a real rendered presentation.

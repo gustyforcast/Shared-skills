@@ -1,0 +1,4 @@
+interface:
+  display_name: "Asset Release Inspector"
+  short_description: "Inspect sprites, rigs and asset exports"
+  default_prompt: "Use $asset-release-inspector to review this asset package against its approved references and target-runtime contract, with exact evidence and release blockers."

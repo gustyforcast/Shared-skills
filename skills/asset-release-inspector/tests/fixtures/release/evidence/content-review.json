@@ -1,0 +1,1 @@
+{"fixture":true,"check":"6 * 7","observed_answer":42,"computed_answer":42,"result":"pass"}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Directing FLUX.2 Klein"
+  short_description: "Draft and revise Klein prompts from image feedback"
+  default_prompt: "Use $directing-flux2-klein to prepare or revise my image prompt and record feedback without generating an image."
