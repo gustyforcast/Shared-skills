@@ -1,0 +1,1 @@
+Synthetic lesson: multiply 6 by 7. Worked answer: 42.

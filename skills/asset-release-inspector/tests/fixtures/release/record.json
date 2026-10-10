@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "scope": {
+    "id": "fixture-release",
+    "source_revision": "approved-plan-r4"
+  },
+  "artifacts": [
+    {
+      "id": "lesson",
+      "path": "final/lesson.txt",
+      "sha256": "2d0338543511a7f92b3c74603647549ca6f441a3f5d814c6e06ba1395c55db05"
+    }
+  ],
+  "required_gates": [
+    "content",
+    "visual"
+  ],
+  "gates": [
+    {
+      "id": "content",
+      "result": "pass",
+      "rationale": "Synthetic fixture check; inspect the raw observation, not this declaration.",
+      "artifact_ids": [
+        "lesson"
+      ],
+      "evidence": [
+        {
+          "path": "evidence/content-review.json",
+          "sha256": "d7f143fb7a16f4e339fb2ed4dc3f484edccfa89e1064f1f7e92e4d219e6217c5",
+          "scope_id": "fixture-release",
+          "source_revision": "approved-plan-r4",
+          "artifact_sha256": {
+            "lesson": "2d0338543511a7f92b3c74603647549ca6f441a3f5d814c6e06ba1395c55db05"
+          }
+        }
+      ]
+    },
+    {
+      "id": "visual",
+      "result": "pass",
+      "rationale": "Synthetic fixture check; inspect the raw observation, not this declaration.",
+      "artifact_ids": [
+        "lesson"
+      ],
+      "evidence": [
+        {
+          "path": "evidence/layout-review.txt",
+          "sha256": "c61ae10213cdf14387934ce8f668a46076dee06e804d01c43a2220ce2d1f9965",
+          "scope_id": "fixture-release",
+          "source_revision": "approved-plan-r4",
+          "artifact_sha256": {
+            "lesson": "2d0338543511a7f92b3c74603647549ca6f441a3f5d814c6e06ba1395c55db05"
+          }
+        }
+      ]
+    }
+  ]
+}

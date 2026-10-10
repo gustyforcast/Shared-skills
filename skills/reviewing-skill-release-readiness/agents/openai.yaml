@@ -1,0 +1,4 @@
+interface:
+  display_name: "Skill Release Readiness Reviewer"
+  short_description: "Check a skill before sharing"
+  default_prompt: "Use $reviewing-skill-release-readiness to inspect this skill or plugin for distribution readiness. Bind findings to exact source files and do not publish or modify anything."
